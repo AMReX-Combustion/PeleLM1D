@@ -1,0 +1,242 @@
+
+ CHEMKIN-III GAS-PHASE MECHANISM INTERPRETER:
+ DOUBLE PRECISION Vers. 6.15 98/03/03        
+ Copyright 1995, Sandia Corporation.
+ The U.S. Government retains a limited license in this software.
+
+
+                          --------------------
+                          ELEMENTS     ATOMIC
+                          CONSIDERED   WEIGHT
+                          --------------------
+                           1. H       1.00797    
+                           2. O       15.9994    
+                           3. N       14.0067    
+                          --------------------
+ -------------------------------------------------------------------------------
+                          C
+                       P  H
+                       H  A
+                       A  R
+ SPECIES               S  G  MOLECULAR  TEMPERATURE  ELEMENT COUNT
+ CONSIDERED            E  E  WEIGHT     LOW    HIGH  H  O  N  
+ -------------------------------------------------------------------------------
+   1. H2               G  0    2.01594   300   5000   2  0  0
+   2. O2               G  0   31.99880   300   5000   0  2  0
+   3. H2O              G  0   18.01534   300   5000   2  1  0
+   4. H                G  0    1.00797   300   5000   1  0  0
+   5. O                G  0   15.99940   300   5000   0  1  0
+   6. OH               G  0   17.00737   200   5000   1  1  0
+   7. HO2              G  0   33.00677   200   5000   1  2  0
+   8. H2O2             G  0   34.01474   300   5000   2  2  0
+   9. N2               G  0   28.01340   300   5000   0  0  2
+ -------------------------------------------------------------------------------
+
+
+
+                                                      (k = A T**b exp(-E/RT))
+      REACTIONS CONSIDERED                              A        b        E
+
+   1. H+O2=O+OH                                     3.55E+15   -0.4    16599.0
+   2. O+H2=H+OH                                     5.08E+04    2.7     6290.0
+   3. H2+OH=H2O+H                                   2.16E+08    1.5     3430.0
+   4. O+H2O=OH+OH                                   2.97E+06    2.0    13400.0
+   5. H2+M=H+H+M                                    4.58E+19   -1.4   104380.0
+      H2              Enhanced by    2.500E+00
+      H2O             Enhanced by    1.200E+01
+   6. O+O+M=O2+M                                    6.16E+15   -0.5        0.0
+      H2              Enhanced by    2.500E+00
+      H2O             Enhanced by    1.200E+01
+   7. O+H+M=OH+M                                    4.71E+18   -1.0        0.0
+      H2              Enhanced by    2.500E+00
+      H2O             Enhanced by    1.200E+01
+   8. H+OH+M=H2O+M                                  3.80E+22   -2.0        0.0
+      H2              Enhanced by    2.500E+00
+      H2O             Enhanced by    1.200E+01
+   9. H+O2(+M)=HO2(+M)                              1.48E+12    0.6        0.0
+      Low pressure limit:  0.63660E+21 -0.17200E+01  0.52480E+03
+      TROE centering:      0.80000E+00  0.10000E-29  0.10000E+31
+      H2              Enhanced by    2.000E+00
+      H2O             Enhanced by    1.100E+01
+      O2              Enhanced by    7.800E-01
+  10. HO2+H=H2+O2                                   1.66E+13    0.0      823.0
+  11. HO2+H=OH+OH                                   7.08E+13    0.0      295.0
+  12. HO2+O=O2+OH                                   3.25E+13    0.0        0.0
+  13. HO2+OH=H2O+O2                                 2.89E+13    0.0     -497.0
+  14. HO2+HO2=H2O2+O2                               4.20E+14    0.0    11982.0
+      Declared duplicate reaction...
+  15. HO2+HO2=H2O2+O2                               1.30E+11    0.0    -1629.3
+      Declared duplicate reaction...
+  16. H2O2(+M)=OH+OH(+M)                            2.95E+14    0.0    48430.0
+      Low pressure limit:  0.12020E+18  0.00000E+00  0.45500E+05
+      TROE centering:      0.50000E+00  0.10000E-29  0.10000E+31
+      H2              Enhanced by    2.500E+00
+      H2O             Enhanced by    1.200E+01
+  17. H2O2+H=H2O+OH                                 2.41E+13    0.0     3970.0
+  18. H2O2+H=HO2+H2                                 4.82E+13    0.0     7950.0
+  19. H2O2+O=OH+HO2                                 9.55E+06    2.0     3970.0
+  20. H2O2+OH=HO2+H2O                               1.00E+12    0.0        0.0
+      Declared duplicate reaction...
+  21. H2O2+OH=HO2+H2O                               5.80E+14    0.0     9557.0
+      Declared duplicate reaction...
+
+  NOTE:  A units mole-cm-sec-K, E units cal/mole
+
+
+
+ NO ERRORS FOUND ON INPUT: 
+ ASCII Vers. 1.0 CHEMKIN linkfile chem.asc written.
+
+ WORKING SPACE REQUIREMENTS ARE
+    INTEGER:      666
+    REAL:         448
+    CHARACTER:     12
+
+ CKLIB: CHEMKIN-III GAS-PHASE CHEMICAL KINETICS LIBRARY,
+ DOUBLE PRECISION Vers. 5.15 98/07/30        
+ Copyright 1995, Sandia Corporation.
+ The U.S. Government retains a limited license in this software.
+
+
+
+ CKLIB: CHEMKIN-III GAS-PHASE CHEMICAL KINETICS LIBRARY,
+ DOUBLE PRECISION Vers. 5.15 98/07/30        
+ Copyright 1995, Sandia Corporation.
+ The U.S. Government retains a limited license in this software.
+
+
+
+ DATA HAS BEEN FIT OVER THE RANGE:  TLOW=   300.00, THIGH=  5000.00
+
+
+
+ TRANSPORT PARAMETERS FROM DATA BASE:
+
+ H                  0   145.000     2.050     0.000     0.000     0.000          
+ H2                 1    38.000     2.920     0.000     0.790   280.000          
+ H2O                2   572.400     2.605     1.844     0.000     4.000          
+ H2O2               2   107.400     3.458     0.000     0.000     3.800          
+ HO2                2   107.400     3.458     0.000     0.000     1.000 ! *      
+ N2                 1    97.530     3.621     0.000     1.760     4.000          
+ O                  0    80.000     2.750     0.000     0.000     0.000          
+ O2                 1   107.400     3.458     0.000     1.600     3.800          
+ OH                 1    80.000     2.750     0.000     0.000     0.000          
+
+
+
+ COEFFICIENTS FOR SPECIES CONDUCTIVITIES
+ MAXIMUM FITTING ERROR =    1.768E-02
+  
+  H2           0.153E+02  -0.322E+01   0.527E+00  -0.228E-01
+  O2          -0.434E+01   0.402E+01  -0.442E+00   0.200E-01
+  H2O          0.174E+02  -0.646E+01   0.118E+01  -0.598E-01
+  H            0.604E+00   0.300E+01  -0.303E+00   0.129E-01
+  O            0.278E+01   0.144E+01  -0.103E+00   0.440E-02
+  OH           0.182E+02  -0.514E+01   0.824E+00  -0.378E-01
+  HO2          0.108E+02  -0.281E+01   0.578E+00  -0.297E-01
+  H2O2         0.360E+00   0.161E+01  -0.277E-01  -0.212E-02
+  N2           0.671E+01  -0.824E+00   0.256E+00  -0.133E-01
+
+
+
+ COEFFICIENTS FOR SPECIES VISCOSITIES
+ MAXIMUM FITTING ERROR =    3.645E-03
+  
+  H2          -0.136E+02   0.884E+00  -0.325E-01   0.147E-02
+  O2          -0.160E+02   0.217E+01  -0.198E+00   0.854E-02
+  H2O         -0.149E+02   0.561E+00   0.137E+00  -0.104E-01
+  H           -0.189E+02   0.300E+01  -0.303E+00   0.129E-01
+  O           -0.140E+02   0.144E+01  -0.103E+00   0.440E-02
+  OH          -0.140E+02   0.144E+01  -0.103E+00   0.440E-02
+  HO2         -0.160E+02   0.217E+01  -0.198E+00   0.854E-02
+  H2O2        -0.160E+02   0.217E+01  -0.198E+00   0.854E-02
+  N2          -0.155E+02   0.193E+01  -0.167E+00   0.723E-02
+
+
+
+ COEFFICIENTS FOR SPECIES DIFFUSION COEFFICIENTS
+ MAXIMUM FITTING ERROR =    2.872E-03
+  
+  H2        H2          -0.961E+01   0.188E+01  -0.293E-01   0.128E-02
+  
+  O2        H2          -0.121E+02   0.264E+01  -0.131E+00   0.573E-02
+  O2        O2          -0.151E+02   0.325E+01  -0.205E+00   0.876E-02
+  
+  H2O       H2          -0.170E+02   0.451E+01  -0.360E+00   0.151E-01
+  H2O       O2          -0.202E+02   0.514E+01  -0.423E+00   0.171E-01
+  H2O       H2O         -0.153E+02   0.243E+01   0.200E-01  -0.507E-02
+  
+  H         H2          -0.108E+02   0.250E+01  -0.109E+00   0.462E-02
+  H         O2          -0.158E+02   0.426E+01  -0.334E+00   0.143E-01
+  H         H2O         -0.178E+02   0.480E+01  -0.367E+00   0.143E-01
+  H         H           -0.141E+02   0.389E+01  -0.283E+00   0.120E-01
+  
+  O         H2          -0.109E+02   0.231E+01  -0.870E-01   0.386E-02
+  O         O2          -0.140E+02   0.300E+01  -0.174E+00   0.746E-02
+  O         H2O         -0.183E+02   0.467E+01  -0.373E+00   0.154E-01
+  O         H           -0.139E+02   0.366E+01  -0.259E+00   0.111E-01
+  O         O           -0.125E+02   0.258E+01  -0.119E+00   0.505E-02
+  
+  OH        H2          -0.109E+02   0.231E+01  -0.870E-01   0.386E-02
+  OH        O2          -0.140E+02   0.299E+01  -0.173E+00   0.740E-02
+  OH        H2O         -0.183E+02   0.467E+01  -0.373E+00   0.154E-01
+  OH        H           -0.140E+02   0.367E+01  -0.260E+00   0.112E-01
+  OH        O           -0.125E+02   0.258E+01  -0.119E+00   0.505E-02
+  OH        OH          -0.125E+02   0.258E+01  -0.119E+00   0.505E-02
+  
+  HO2       H2          -0.121E+02   0.265E+01  -0.131E+00   0.574E-02
+  HO2       O2          -0.151E+02   0.325E+01  -0.205E+00   0.876E-02
+  HO2       H2O         -0.196E+02   0.491E+01  -0.398E+00   0.162E-01
+  HO2       H           -0.158E+02   0.426E+01  -0.334E+00   0.143E-01
+  HO2       O           -0.140E+02   0.301E+01  -0.174E+00   0.748E-02
+  HO2       OH          -0.140E+02   0.300E+01  -0.173E+00   0.743E-02
+  HO2       HO2         -0.151E+02   0.325E+01  -0.205E+00   0.876E-02
+  
+  H2O2      H2          -0.121E+02   0.265E+01  -0.131E+00   0.574E-02
+  H2O2      O2          -0.151E+02   0.325E+01  -0.205E+00   0.877E-02
+  H2O2      H2O         -0.196E+02   0.491E+01  -0.397E+00   0.162E-01
+  H2O2      H           -0.158E+02   0.426E+01  -0.335E+00   0.143E-01
+  H2O2      O           -0.140E+02   0.301E+01  -0.175E+00   0.751E-02
+  H2O2      OH          -0.140E+02   0.300E+01  -0.174E+00   0.746E-02
+  H2O2      HO2         -0.151E+02   0.325E+01  -0.205E+00   0.876E-02
+  H2O2      H2O2        -0.151E+02   0.325E+01  -0.205E+00   0.876E-02
+  
+  N2        H2          -0.122E+02   0.267E+01  -0.135E+00   0.595E-02
+  N2        O2          -0.148E+02   0.313E+01  -0.190E+00   0.811E-02
+  N2        H2O         -0.201E+02   0.509E+01  -0.418E+00   0.170E-01
+  N2        H           -0.154E+02   0.410E+01  -0.313E+00   0.134E-01
+  N2        O           -0.136E+02   0.287E+01  -0.156E+00   0.668E-02
+  N2        OH          -0.136E+02   0.286E+01  -0.155E+00   0.663E-02
+  N2        HO2         -0.148E+02   0.313E+01  -0.190E+00   0.812E-02
+  N2        H2O2        -0.148E+02   0.313E+01  -0.190E+00   0.812E-02
+  N2        N2          -0.145E+02   0.305E+01  -0.179E+00   0.769E-02
+
+
+
+ COEFFICIENTS FOR THERMAL DIFFUSION RATIOS
+ MAXIMUM FITTING ERROR =    2.070E-02
+  
+  H2        H2           0.000E+00   0.000E+00   0.000E+00   0.000E+00
+  H2        O2           0.465E+00   0.114E-04   0.659E-09  -0.204E-12
+  H2        H2O          0.144E+00   0.348E-03  -0.121E-06   0.129E-10
+  H2        H           -0.166E+00  -0.186E-04   0.611E-08  -0.726E-12
+  H2        O            0.423E+00  -0.113E-04   0.114E-07  -0.174E-11
+  H2        OH           0.429E+00  -0.115E-04   0.116E-07  -0.177E-11
+  H2        HO2          0.466E+00   0.114E-04   0.661E-09  -0.205E-12
+  H2        H2O2         0.468E+00   0.115E-04   0.663E-09  -0.205E-12
+  H2        N2           0.462E+00   0.197E-05   0.510E-08  -0.808E-12
+  
+  H         H2           0.166E+00   0.186E-04  -0.611E-08   0.726E-12
+  H         O2           0.304E+00   0.265E-03  -0.971E-07   0.108E-10
+  H         H2O         -0.563E-01   0.552E-03  -0.173E-06   0.172E-10
+  H         H            0.000E+00   0.000E+00   0.000E+00   0.000E+00
+  H         O            0.338E+00   0.185E-03  -0.689E-07   0.782E-11
+  H         OH           0.341E+00   0.187E-03  -0.694E-07   0.787E-11
+  H         HO2          0.305E+00   0.266E-03  -0.973E-07   0.108E-10
+  H         H2O2         0.305E+00   0.266E-03  -0.975E-07   0.108E-10
+  H         N2           0.320E+00   0.241E-03  -0.886E-07   0.989E-11
+
+ WORKING SPACE REQUIREMENTS ARE
+    INTEGER:       38
+    REAL:        1854
+

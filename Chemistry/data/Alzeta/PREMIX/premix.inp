@@ -1,0 +1,75 @@
+/ Centered differencing 
+/CDIF
+/  freely propagating flame
+FREE
+ENRG
+/ Multicomponent
+/MULT
+/ Thermal diffusion
+/TDIF
+/  initial flow-rate estimate
+FLRT  .04   ! gm/cm**2-sec
+/   atmospheric pressure
+PRES  1.0   ! atmospheres
+/   initial grid and profile specification
+NPTS 7
+NPTS 20
+/XEND      1.3  ! cm
+/XCEN      0.7  ! cm
+XEND      2.5  ! cm
+XCEN      1.2  ! cm
+/   temperature to fixed for the flame speed computation
+TFIX  650.
+/   mesh adaptation criteria
+GRAD 0.2
+CURV 0.3
+/   unreacted fuel-oxidizer makeup
+MOLE
+/ unreacted fuel-ox makeup
+REAC CF4  0.031
+REAC CH4  0.092
+REAC O2   0.184
+REAC N2   0.693
+/   estimated product mole fractions
+PROD  H2O  0.1158
+PROD  CO2  0.1158
+PROD  HF   0.1157
+PROD  N2   0.6527
+/   estimated peak intermediate mole fractions
+/   convergence tolerance for Newton
+ATOL  1.E-9
+RTOL  1.E-4
+/   convergence tolerance for timestepping
+ATIM  1.E-5
+RTIM  1.E-5
+/   maximum printing
+PRNT    1
+/   time step control
+TIME   100   5.0E-7  ! sec
+TIM2   200   1.0E-6  ! sec
+NJAC   2
+/   estimated temperature profile
+TEMP 0.0 598.
+TEMP 0.5 600.
+TEMP 1.0 600.
+TEMP 1.03 652.
+TEMP 1.05 854.
+TEMP 1.06 1216.
+TEMP 1.07 1512.
+TEMP 1.08 1892.
+TEMP 1.09 2000.
+TEMP 1.1 2030.
+TEMP 1.5 2111.
+TEMP 2.2 2190.
+TEMP 10.0 2190.
+/   a continuation run will follow
+CNTN
+END
+/
+XSTR   0.0
+XEND   5.0
+CNTN
+END
+/
+XEND   7.0
+END

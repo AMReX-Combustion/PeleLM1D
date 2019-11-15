@@ -1,0 +1,8 @@
+fuelname=CH4
+extractXvsSpec=0
+extractXvsW=1
+extractXvsPhi=0
+interpRoutineFileName=gri30ion_phi_1.00.f
+extractTvsQ=0
+extractTvsSpecY=0
+
